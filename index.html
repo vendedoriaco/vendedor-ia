@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VendedorIA - El Pack Definitivo de 50 Prompts</title>
+    <meta name="description" content="Convierte chats de Facebook Marketplace en pedidos instantáneos por WhatsApp usando Inteligencia Artificial.">
+    <!-- Tailwind CSS para el diseño -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Configuración personalizada de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',    // Slate 900
+                            darker: '#020617',  // Slate 950
+                            green: '#22c55e',   // WhatsApp Green
+                            greenHover: '#16a34a',
+                            accent: '#3b82f6',  // Blue accent
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slight': 'bounce 2s infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Efecto de gradiente animado para texto */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #22c55e, #3b82f6);
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        /* FAQ Accordion Transitions */
+        .faq-answer {
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .faq-answer.open {
+            max-height: 500px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-brand-darker text-slate-300 font-sans antialiased selection:bg-brand-green selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-panel border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <!-- Se asume que el logo subido estará en la misma carpeta -->
+                    <img class="h-12 w-auto rounded-lg shadow-[0_0_15px_rgba(34,197,94,0.3)]" src="LOGO VENDEDOR IA.jpeg" alt="Logo Vendedor IA" onerror="this.src='https://placehold.co/100x40/1e293b/22c55e?text=VendedorIA'">
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#beneficios" class="text-sm font-medium hover:text-white transition">Qué incluye</a>
+                    <a href="#oferta" class="bg-brand-green hover:bg-brand-greenHover text-white px-6 py-2 rounded-full font-bold shadow-lg shadow-brand-green/30 transition transform hover:scale-105">
+                        <i class="fa-solid fa-bolt mr-2"></i>Descargar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Elementos decorativos de fondo -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-brand-green/20 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Copy Hero -->
+                <div class="text-center lg:text-left">
+                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-slate-800 border border-slate-700 text-sm text-brand-green mb-6 font-semibold shadow-sm">
+                        <span class="flex h-2 w-2 relative mr-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-green"></span>
+                        </span>
+                        Optimizado para Latinoamérica
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                        ¿Harto del "Sigue disponible?" y que te dejen en <span class="text-gradient">Visto</span>?
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-400 mb-8 leading-relaxed">
+                        Convierte chats de Facebook Marketplace en pedidos instantáneos por WhatsApp usando <strong>50 Prompts de Inteligencia Artificial</strong> listos para copiar, pegar y vender.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <!-- Enlace de pago de Bold Integrado -->
+                        <a href="https://checkout.bold.co/payment/LNK_IOSA98OXH1" target="_blank" rel="noopener noreferrer" class="bg-brand-green hover:bg-brand-greenHover text-white text-lg px-8 py-4 rounded-xl font-bold shadow-[0_0_25px_rgba(34,197,94,0.4)] transition-all transform hover:-translate-y-1 flex items-center justify-center">
+                            <i class="fa-brands fa-whatsapp text-2xl mr-3"></i>
+                            Quiero el Pack por solo $13
+                        </a>
+                    </div>
+                    <p class="mt-4 text-sm text-slate-500 flex items-center justify-center lg:justify-start">
+                        <i class="fa-solid fa-shield-halved mr-2 text-brand-accent"></i> Pago 100% seguro y acceso inmediato.
+                    </p>
+                </div>
+                
+                <!-- Imagen Hero Mockup -->
+                <div class="relative mx-auto w-full max-w-md lg:max-w-full">
+                    <!-- Efecto visual de celular/app -->
+                    <div class="relative bg-slate-800 rounded-3xl border-4 border-slate-700 shadow-2xl overflow-hidden transform lg:rotate-2 hover:rotate-0 transition duration-500">
+                        <div class="bg-slate-900 p-4 border-b border-slate-800 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-brand-green text-xl"></i>
+                                <span class="text-white font-semibold">Cliente Marketplace</span>
+                            </div>
+                            <i class="fa-solid fa-ellipsis-vertical text-slate-500"></i>
+                        </div>
+                        <div class="p-4 space-y-4 bg-[url('https://i.postimg.cc/qRqp75z0/wa-bg.png')] bg-cover bg-center h-80 overflow-hidden relative">
+                            <!-- Burbuja Cliente -->
+                            <div class="bg-slate-700 text-white p-3 rounded-2xl rounded-tl-none w-3/4 text-sm shadow-md">
+                                ¡Hola! ¿Sigue disponible? Me interesa pero ¿está muy caro? 🤔
+                            </div>
+                            <!-- Burbuja Vendedor (IA) -->
+                            <div class="bg-brand-green text-white p-3 rounded-2xl rounded-tr-none w-5/6 ml-auto text-sm shadow-md mt-4 relative">
+                                <span class="absolute -top-3 -left-3 bg-brand-accent text-xs font-bold px-2 py-1 rounded-full shadow"><i class="fa-solid fa-robot mr-1"></i>Prompt #05</span>
+                                ¡Hola! Entiendo perfecto tu duda. Nuestro producto cuenta con garantía extendida y calidad premium que te ahorrará dolores de cabeza. Si concretamos hoy, te ofrezco envío gratis. ¿Te gustaría que te lo separe? ⚡
+                            </div>
+                            <!-- Burbuja Cliente 2 -->
+                            <div class="bg-slate-700 text-white p-3 rounded-2xl rounded-tl-none w-2/3 text-sm shadow-md mt-4">
+                                ¡Me convence! ¿A dónde deposito? 💸
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Agitación (El Problema) -->
+    <section class="py-20 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Tener el mejor producto no sirve si no sabes cerrar la venta</h2>
+            <p class="text-lg text-slate-400 mb-12">El ecosistema digital actual es cruel. El cliente latinoamericano tiene 3 opciones más baratas abiertas al mismo tiempo. Si dudas, si tardas, o si suenas como un robot... <strong>pierdes la venta.</strong></p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-800 p-6 rounded-2xl border border-red-900/30">
+                    <div class="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-clock text-red-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-white font-bold mb-2">Cuello de Botella</h3>
+                    <p class="text-sm text-slate-400">Pierdes horas escribiendo las mismas respuestas una y otra vez sin resultados.</p>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-2xl border border-red-900/30">
+                    <div class="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-ghost text-red-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-white font-bold mb-2">El temido "Visto"</h3>
+                    <p class="text-sm text-slate-400">Te preguntan el precio y de repente desaparecen para siempre.</p>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-2xl border border-red-900/30">
+                    <div class="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-money-bill-transfer text-red-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-white font-bold mb-2">Guerra de Precios</h3>
+                    <p class="text-sm text-slate-400">No sabes cómo justificar tu precio cuando te dicen "en otro lado está más barato".</p>
+                </div>
+            </div>
+            
+            <p class="mt-12 text-xl font-medium text-brand-green">No es tu culpa ni la de tu producto. Es la falta de un sistema de persuasión estructurado.</p>
+        </div>
+    </section>
+
+    <!-- The Solution / Benefits -->
+    <section id="beneficios" class="py-24 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Configura tu máquina de ventas en <span class="text-brand-green">10 minutos</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">VendedorIA es un arsenal de 50 "órdenes" (prompts) prediseñadas. Solo copias, pegas en tu IA favorita (ChatGPT, Claude, Gemini) llenas los corchetes y obtienes textos de venta maestros.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Característica 1 -->
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-14 h-14 bg-brand-green/20 rounded-xl flex items-center justify-center text-brand-green text-2xl border border-brand-green/30">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Grupo 1: Cierre Rápido & Neuroventas</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">20 Prompts base para generar urgencia, manejar disponibilidad, justificar precios (anclaje de valor) y explicar envíos sin generar desconfianza.</p>
+                    </div>
+                </div>
+
+                <!-- Característica 2 -->
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 text-2xl border border-blue-500/30">
+                        <i class="fa-solid fa-shield-cat"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Grupo 2: Artillería Pesada (Objeciones)</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">15 Prompts avanzados usando gatillos mentales. Rebate el "Lo voy a pensar", "Está caro", y aprende a usar la técnica del "Takeaway" para revivir ventas muertas.</p>
+                    </div>
+                </div>
+
+                <!-- Característica 3 -->
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-400 text-2xl border border-purple-500/30">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Grupo 3: Upsell & Fidelización</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">15 Prompts estratégicos. Aumenta tu ticket promedio vendiendo complementos y reactiva a clientes antiguos (aquí está tu verdadero margen de ganancia).</p>
+                    </div>
+                </div>
+
+                <!-- Característica 4 -->
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-14 h-14 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-400 text-2xl border border-amber-500/30">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Automatización en WhatsApp Business</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Incluye la guía paso a paso para configurar las respuestas generadas como atajos rápidos (/precio, /envio) y no volver a teclear lo mismo nunca más.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Callout -->
+    <section class="py-16 bg-gradient-to-r from-brand-dark to-slate-800 border-y border-slate-700">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-8">"Contestar mensajes improvisando no es tener un negocio, es tener un trabajo esclavo"</h2>
+            <p class="text-lg text-slate-300 italic mb-8">Da el salto. La diferencia entre un vendedor que factura para sobrevivir y un empresario que domina su mercado no está en el producto. <strong>Está en los sistemas que utilizan.</strong></p>
+            <div class="flex justify-center space-x-2 text-brand-green text-xl">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="mt-4 text-slate-400 font-medium">Calificado 5/5 por vendedores en toda LATAM</p>
+        </div>
+    </section>
+
+    <!-- Pricing / Offer Section -->
+    <section id="oferta" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="glass-panel p-8 md:p-12 rounded-3xl relative overflow-hidden shadow-2xl">
+                <!-- Ribbon -->
+                <div class="absolute top-6 -right-12 bg-red-600 text-white px-12 py-1 font-bold text-sm transform rotate-45 shadow-lg">
+                    OFERTA LIMITADA
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-white mb-4">Empieza a cerrar más ventas hoy</h2>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-brand-green mt-1 mr-3"></i>
+                                <span class="text-slate-300"><strong>PDF Manual Oficial:</strong> Los 50 Prompts IA comprobados.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-brand-green mt-1 mr-3"></i>
+                                <span class="text-slate-300"><strong>Guía de Implementación:</strong> Configuración en 10 minutos.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-brand-green mt-1 mr-3"></i>
+                                <span class="text-slate-300"><strong>Bonus:</strong> Estrategias de Retención y Takeaway.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-brand-green mt-1 mr-3"></i>
+                                <span class="text-slate-300">Acceso vitalicio al documento.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-slate-900 p-8 rounded-2xl text-center border border-slate-700 relative">
+                        <p class="text-slate-400 uppercase tracking-wider text-sm font-bold mb-2">Precio Regular <span class="line-through text-red-400 ml-1">$49</span></p>
+                        <div class="text-5xl font-extrabold text-white mb-2">
+                            $13 <span class="text-lg text-slate-500 font-normal">USD</span>
+                        </div>
+                        <p class="text-sm text-brand-green font-semibold mb-6">Pagas una vez, lo usas para siempre.</p>
+                        
+                        <!-- CTA Botón de Pago BOLD -->
+                        <a href="https://checkout.bold.co/payment/LNK_IOSA98OXH1" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-brand-green to-brand-greenHover text-white py-4 rounded-xl font-bold text-lg shadow-[0_0_20px_rgba(34,197,94,0.5)] transition transform hover:scale-105 mb-4">
+                            ¡Sí, Quiero Mi Pack Ahora!
+                        </a>
+                        
+                        <div class="flex items-center justify-center text-slate-400 text-xs gap-2">
+                            <i class="fa-solid fa-lock"></i>
+                            Pago 100% seguro a través de Bold.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-brand-darker">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Preguntas Frecuentes</h2>
+            
+            <div class="space-y-4">
+                <!-- Item 1 -->
+                <div class="bg-slate-800 rounded-xl border border-slate-700">
+                    <button class="faq-button w-full text-left px-6 py-4 font-semibold text-white flex justify-between items-center focus:outline-none">
+                        ¿Necesito pagar ChatGPT Plus para usarlos?
+                        <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-slate-400 text-sm">
+                        ¡Para nada! Todos los prompts están optimizados para funcionar perfectamente con las versiones gratuitas de ChatGPT, Claude o Gemini.
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="bg-slate-800 rounded-xl border border-slate-700">
+                    <button class="faq-button w-full text-left px-6 py-4 font-semibold text-white flex justify-between items-center focus:outline-none">
+                        ¿Sirve para cualquier tipo de producto físico?
+                        <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-slate-400 text-sm">
+                        Sí, el manual incluye espacios en corchetes [COMO ESTE] donde simplemente colocas el nombre de tu producto, tu ciudad y tu precio. La Inteligencia artificial adaptará el tono persuasivo a lo que tú vendes (ropa, tecnología, muebles, etc).
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-slate-800 rounded-xl border border-slate-700">
+                    <button class="faq-button w-full text-left px-6 py-4 font-semibold text-white flex justify-between items-center focus:outline-none">
+                        ¿Cómo recibo el material tras el pago?
+                        <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-slate-400 text-sm">
+                        Una vez completado tu pago seguro mediante el enlace, se te redirigirá a la página de descarga o recibirás automáticamente el PDF en tu correo para que comiences a implementar hoy mismo.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#020617] py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <!-- Footer Logo/Text -->
+            <h3 class="text-2xl font-bold text-white mb-4"><i class="fa-solid fa-bolt text-brand-green mr-2"></i>VendedorIA</h3>
+            <p class="text-slate-500 text-sm mb-6 max-w-md mx-auto">Transformando la manera en que los emprendedores de Latinoamérica venden por Facebook Marketplace y WhatsApp.</p>
+            
+            <p class="text-slate-600 text-xs">
+                &copy; <span id="year"></span> Todos los derechos reservados. Un producto impulsado para aumentar tus ventas.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante móvil (aparece en scroll) -->
+    <div id="mobile-cta" class="fixed bottom-0 left-0 w-full p-4 glass-panel md:hidden z-50 transform translate-y-full transition-transform duration-300">
+        <a href="https://checkout.bold.co/payment/LNK_IOSA98OXH1" class="block w-full bg-brand-green text-white text-center py-3 rounded-lg font-bold shadow-lg">
+            ¡Descargar Pack por $13!
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Año automático en el footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Lógica del Accordion FAQ
+        const faqButtons = document.querySelectorAll('.faq-button');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                // Toggle current
+                answer.classList.toggle('open');
+                icon.classList.toggle('rotate-180');
+                
+                // Close others (optional, if you want only one open at a time)
+                faqButtons.forEach(otherBtn => {
+                    if (otherBtn !== button) {
+                        otherBtn.nextElementSibling.classList.remove('open');
+                        otherBtn.querySelector('i').classList.remove('rotate-180');
+                    }
+                });
+            });
+        });
+
+        // Mostrar CTA flotante en móvil al hacer scroll
+        const mobileCta = document.getElementById('mobile-cta');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                mobileCta.classList.remove('translate-y-full');
+            } else {
+                mobileCta.classList.add('translate-y-full');
+            }
+        });
+    </script>
+</body>
+</html>
